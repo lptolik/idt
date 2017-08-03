@@ -51,7 +51,10 @@ done
 echo "$string"
 
 fname+=".txt"
+fname=`echo $fname|sed 'y/абвгджзийклмнопрстуфхыэе/abvgdjzijklmnoprstufhyee/'|sed 's/[ьъ]//g; s/ё/yo/g; s/ц/ts/g; s/ч/ch/g; s/ш/sh/g; s/щ/sh/g; s/ю/yu/g; s/я/ya/'`; 
+fname=`echo $fname|sed 'y/АБВГДЖЗИЙКЛМНОПРСТУФХЫЭЕ/ABVGDJZIJKLMNOPRSTUFHYEE/'|sed 's/[ЬЪ]//g; s/Ё/YO/g; s/Ц/TS/g; s/Ч/CH/g; s/Ш/SH/g; s/Щ/SH/g; s/Ю/YU/g; s/Я/YA/'`; 
 fname=`echo "${fname}" | tr '[A-Z]' '[a-z]'`
+
 
 DIR='/Users/lptolik/Documents/Projects/Plans/dokuwiki/idonethis'
 
