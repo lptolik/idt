@@ -13,7 +13,7 @@ EOF
 }
 
 EDITOR='N'
-while getopts "htv:" opt; do
+while getopts "htv" opt; do
 	case $opt in
 		h)
 			show_help
